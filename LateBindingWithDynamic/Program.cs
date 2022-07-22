@@ -13,7 +13,7 @@ namespace LateBindingWithDynamic
 
         private static void AddWithReflection()
         {
-            Assembly asm = Assembly.Load("MathLibrary");
+            Assembly asm = Assembly.LoadFrom("MathLibrary.dll");
             try
             {
                 // Получить метаданные для типа SimpleMath.

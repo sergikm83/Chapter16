@@ -7,7 +7,8 @@ namespace LateBindingWithDynamic
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            AddWithReflection();
+            AddWithDynamic();
         }
 
         private static void AddWithReflection()
@@ -23,7 +24,7 @@ namespace LateBindingWithDynamic
                 MethodInfo mi = math.GetMethod("Add");
                 // Вызвать метод Add с параметрами.
                 object[] args = { 10, 70 };
-                Console.WriteLine("Results is: {0}", mi.Invoke(obj, args);
+                Console.WriteLine("Results is: {0}", mi.Invoke(obj, args));
             }
             catch (Exception ex)
             {
@@ -42,9 +43,10 @@ namespace LateBindingWithDynamic
                 // Обратите внимание, насколько легко теперь вызывать метод Add().
                 Console.WriteLine("Results is: {0}", obj.Add(10, 70));
             }
-            catch(Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
+            catch (Microsoft.CSharp.RuntimeBinder.RuntimeBinderException ex)
             {
                 Console.WriteLine(ex.Message);
             }
+        }
     }
-    }
+}

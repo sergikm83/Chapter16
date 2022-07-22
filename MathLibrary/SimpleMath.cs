@@ -2,7 +2,7 @@
 
 namespace MathLibrary
 {
-    public class Class1
+    public class SimpleMath
     {
     }
 }

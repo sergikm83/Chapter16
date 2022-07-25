@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+// Создать псевдоним для объектной модели Excel.
+using Excel = Microsoft.Office.Interop.Excel;
 
 namespace ExportDataToOfficeApp
 {

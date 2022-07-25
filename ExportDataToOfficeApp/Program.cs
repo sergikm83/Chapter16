@@ -22,6 +22,8 @@ namespace ExportDataToOfficeApp
         {
             // Загрузить Excel и затем создать новую пустую рабочую книгу.
             Excel.Application excelApp = new Excel.Application();
+            // Сделать пользовательский интерфейс Excel видимым на рабочем столе.
+            excelApp.Visible = true;
             excelApp.Workbooks.Add();
             Excel._Worksheet workSheet = excelApp.ActiveSheet;
             // Установить заголовки столбцов в ячейках.

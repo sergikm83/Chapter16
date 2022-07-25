@@ -16,6 +16,7 @@ namespace ExportDataToOfficeApp
                 new Car{ Color = "Black", Make = "Ford", PetName = "Hank" },
                 new Car{ Color = "Yellow", Make = "BMW", PetName = "Davie" }
             };
+            ExportToExcel(carsInStock);
         }
         static void ExportToExcel(List<Car> carInStock)
         {
